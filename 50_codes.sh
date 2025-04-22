@@ -17,12 +17,18 @@ do
   echo "$n * $i = $((n * i))"
 done
 
-
-#3 multiplication
+#3 Count Number of Digits
 #!/bin/bash
-echo "Enter first number:" read num1
-echo "Enter second number:" read num2
-prod=$((num1 * num2)) echo "Product: $prod"
+echo "Enter a number:"
+read num
+count=0
+while [ $num -gt 0 ]
+do
+  count=$((count + 1))
+  num=$((num / 10))
+done
+echo "Total digits: $count"
+
 
 #4 Check Number is Positive, Negative, or Zero
 #!/bin/bash
@@ -36,12 +42,19 @@ else
   echo "Zero"
 fi
 
-
-#5.	Modulus
+#5 Calculate Power
 #!/bin/bash
-echo "Enter first number:" read num1
-echo "Enter second number:" read num2
-mod=$((num1 % num2)) echo "Remainder: $mod" OUTPUT
+echo "Enter base:"
+read base
+echo "Enter exponent:"
+read exp
+result=1
+for ((i=1; i<=exp; i++))
+do
+  result=$((result * base))
+done
+echo "Power: $result"
+
  
 #6.	FindLargestofTwoNumbers
 #!/bin/bash
@@ -191,8 +204,6 @@ else
 fi
 
  
-
-
 #22.Swap two numbers
 #!/bin/bash
 echo "Enter first number:"
@@ -254,21 +265,13 @@ done
 echo "Reversed Number: $rev"
 
  
-
-#26 Calculate Power
+#26.	Modulus
 #!/bin/bash
-echo "Enter base:"
-read base
-echo "Enter exponent:"
-read exp
-result=1
-for ((i=1; i<=exp; i++))
-do
-  result=$((result * base))
-done
-echo "Power: $result"
+echo "Enter first number:" read num1
+echo "Enter second number:" read num2
+mod=$((num1 % num2)) echo "Remainder: $mod" 
 
- 
+
 
 #27 Check Alphabet or Not
 #!/bin/bash
@@ -303,6 +306,11 @@ do
 done
 
  
+#30 multiplication
+#!/bin/bash
+echo "Enter first number:" read num1
+echo "Enter second number:" read num2
+prod=$((num1 * num2)) echo "Product: $prod"
 
 #30 Count Number of Digits
 #!/bin/bash
