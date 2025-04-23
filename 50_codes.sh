@@ -516,11 +516,8 @@ div=$((num1 / num2)) echo "Quotient: $div"
 echo "Today's Date: $(date)"
 echo "Current Month Calendar:"
 cal
-
-# Optional: Ask for year and month input
 read -p "Enter year (e.g., 2025): " year
 read -p "Enter month (1-12): " month
-
-# Display calendar for given month and year
+Display calendar for given month and year
 echo "Calendar for $month/$year:"
 cal $month $year
